@@ -1,0 +1,164 @@
+[
+    {
+        "name" : "Black hoodies",
+        "img" : "https://cdn.luxe.digital/media/20220601090014/best-hoodies-men-carhartt-defender-luxe-digital-780x520.jpg",
+        "price" : "230",
+        "color" : "Black",
+        "instock" : "1",
+        "quantity" : "25",
+        "size" : "S"
+    },
+    {
+        "name" : "Yellow hoodies",
+        "img" : "https://5.imimg.com/data5/AV/IM/KE/SELLER-54165930/hoodie-1000x1000.jpg",
+        "price" : "300",
+        "color" : "Yellow",
+        "instock" : "1",
+        "quantity" : "30",
+        "size" : "XL"
+    },
+    {
+        "name" : "Silver  hoodies",
+        "img" : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mh-8-23-hoodies-1661288751.png?crop=0.502xw:1.00xh;0.498xw,0&resize=640:*",
+        "price" : "130",
+        "color" : "Silver",
+        "instock" : "1",
+        "quantity" : "30",
+        "size" : "M"
+    },
+    {
+        "name" : "Red Style hoodies",
+        "img" : "https://m.media-amazon.com/images/I/71Z8NoD59IL._AC_UL320_.jpg",
+        "price" : "530",
+        "color" : "Red",
+        "instock" : "1",
+        "quantity" : "35",
+        "size" : "XL"
+    },
+    {
+        "name" : "White hoodies",
+        "img" : "https://m.media-amazon.com/images/I/71fD1WLxBnL._AC_UL320_.jpg",
+        "price" : "630",
+        "color" : "White",
+        "instock" : "1",
+        "quantity" : "25",
+        "size" : "M"
+    },
+    {
+        "name" : "Puma hoodies",
+        "img" : "https://www.tradeinn.com/h/13852/138522101/puma-ess--camo-hoodie.jpg",
+        "price" : "240",
+        "color" : "Silver , Black",
+        "instock" : "1",
+        "quantity" : "20",
+        "size" : "S"
+    },
+    {
+        "name" : "Black T-shirt",
+        "img" : "https://media.istockphoto.com/photos/front-of-men-cut-black-tshirt-isolated-on-white-background-picture-id1142212002?b=1&k=20&m=1142212002&s=170667a&w=0&h=1ab1geqE_yju-7c9U8beLJDrztOcJSWn-7aITPBxV0o=",
+        "price" : "430",
+        "color" : "Black",
+        "instock" : "1",
+        "quantity" : "35",
+        "size" : "S"
+    },
+    {
+        "name" : "Yellow T-shirt",
+        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLhEsMeQdN3B3_m5eohOXY8iDxpjySlJRqN9Wuzoe0qg&s",
+        "price" : "400",
+        "color" : "Yellow",
+        "instock" : "1",
+        "quantity" : "35",
+        "size" : "XL"
+    },
+    {
+        "name" : "Silver  T-shirt",
+        "img" : "https://5.imimg.com/data5/UC/LK/EB/SELLER-75990249/silver-color-round-neck-t-shirt-250x250.JPG",
+        "price" : "230",
+        "color" : "Silver",
+        "instock" : "1",
+        "quantity" : "30",
+        "size" : "M"
+    },
+    {
+        "name" : "Red Style T-shirt",
+        "img" : "https://media.istockphoto.com/photos/red-tshirt-clipping-path-picture-id465485445?b=1&k=20&m=465485445&s=170667a&w=0&h=b8cvd7qhxYQzysn8DA_nC0ZImu7K9DDlY9fEFkm2SMA=",
+        "price" : "430",
+        "color" : "Red",
+        "instock" : "1",
+        "quantity" : "35",
+        "size" : "XL"
+    },
+    {
+        "name" : "White T-shirt",
+        "img" : "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2hpdGUlMjB0JTIwc2hpcnR8ZW58MHx8MHx8&w=1000&q=80",
+        "price" : "630",
+        "color" : "White",
+        "instock" : "1",
+        "quantity" : "25",
+        "size" : "M"
+    },
+    {
+        "name" : "Puma T-shirt",
+        "img" : "https://cdn.laredoute.com/products/a/d/1/ad1f4390689db3615d65e4926413a025.jpg",
+        "price" : "240",
+        "color" : "Silver ",
+        "instock" : "1",
+        "quantity" : "25",
+        "size" : "S"
+    },
+    {
+        "name" : "Black Panjabi",
+        "img" : "https://static-01.daraz.com.bd/p/0f9cb0ba9a3356181fa7846281e909e5.jpg",
+        "price" : "430",
+        "color" : "Black",
+        "instock" : "1",
+        "quantity" : "35",
+        "size" : "S"
+    },
+    {
+        "name" : "Yellow Panjabi",
+        "img" : "https://images.othoba.com/images/thumbs/0376403_mens-printed-panjabi-yellow.jpeg",
+        "price" : "650",
+        "color" : "Yellow",
+        "instock" : "1",
+        "quantity" : "35",
+        "size" : "XL"
+    },
+    {
+        "name" : "Silver  Panjabi",
+        "img" : "https://efgfashion.com/wp-content/uploads/2022/06/5-1.jpg",
+        "price" : "830",
+        "color" : "Silver",
+        "instock" : "1",
+        "quantity" : "30",
+        "size" : "M"
+    },
+    {
+        "name" : "Red Style Panjabi",
+        "img" : "https://static-01.daraz.com.bd/p/69f199f7767e94abb242b6fe9ba2544a.jpg",
+        "price" : "430",
+        "color" : "Red",
+        "instock" : "1",
+        "quantity" : "35",
+        "size" : "XL"
+    },
+    {
+        "name" : "White Panjabi",
+        "img" : "https://static-01.daraz.com.bd/p/ca9fb2e363b452e1d447030cdf5d3f04.jpg",
+        "price" : "630",
+        "color" : "White",
+        "instock" : "1",
+        "quantity" : "25",
+        "size" : "M"
+    },
+    {
+        "name" : "Stylish Panjabi",
+        "img" : "https://priyoshopbackup.blob.core.windows.net/priyoshop/content/Images/Thumbs/0151178_stylish-punjabi-for-men-w-07_550.jpeg",
+        "price" : "1040",
+        "color" : "Silver ",
+        "instock" : "1",
+        "quantity" : "25",
+        "size" : "S"
+    }
+]
