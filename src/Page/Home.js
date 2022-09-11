@@ -3,6 +3,7 @@ import { useQuery } from 'react-query'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import TableRow from './Compnent/TableRow';
+import { Link } from "react-router-dom";
 import './Home.css'
 const Home = () => {
     const [productValue , setProductValue] =useState("")
@@ -58,7 +59,7 @@ const Home = () => {
                                 </InputGroup>
                             </div>
                             <div className='ms-3'>
-                                <button className='btn btn-primary px-4'>ADD TO CART</button>
+                                <Link to="/myOrder" className='btn btn-primary px-4'>ADD TO CART</Link>
                             </div>
                         </div>
                     </div>
