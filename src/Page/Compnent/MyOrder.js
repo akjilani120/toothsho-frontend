@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { useQuery } from 'react-query'
 import OrderRow from './OrderRow';
-const MyOrder = ({ spcialPrice, totalPrice, setTotalPrice }) => {   
+const MyOrder = ({ spcialPrice, totalPrice, setTotalPrice }) => {
+    const [show, setShow] = useState(1)
     const { isLoading, error, data, refetch } = useQuery('orderData', () =>
         fetch('https://pure-sierra-82824.herokuapp.com/fashion/order').then(res =>
             res.json()
