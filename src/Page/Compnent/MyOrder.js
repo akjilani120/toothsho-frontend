@@ -1,8 +1,10 @@
 import React from 'react';
+import { useState } from 'react';
 import { useQuery } from 'react-query'
 import OrderRow from './OrderRow';
-const MyOrder = ({spcialPrice}) => {
-    const { isLoading, error, data , refetch } = useQuery('repoData', () =>
+const MyOrder = ({spcialPrice , totalPrice , setTotalPrice}) => {
+    const [show , setShow] = useState(1)
+    const { isLoading, error, data , refetch } = useQuery('orderData', () =>
         fetch('http://localhost:5000/fashion/order').then(res =>
             res.json()
         )
@@ -31,7 +33,7 @@ const MyOrder = ({spcialPrice}) => {
                                 </thead>
                                 <tbody>
                                     {
-                                        data.map((product, index) => <OrderRow refetch={refetch} spcialPrice={spcialPrice} product={product} key={product._id} />)
+                                        data.map((product, index) => <OrderRow  setTotalPrice={setTotalPrice} refetch={refetch} spcialPrice={spcialPrice} product={product} key={product._id} />)
 
                                     }
                                 </tbody>
@@ -39,7 +41,19 @@ const MyOrder = ({spcialPrice}) => {
                         </div>
                     </div>
                     <div className="col-md-4">
-
+                           <div className="total-show-order card p-3">
+                             <h3>Cart Totals</h3>
+                             <div className='d-flex justify-content-between'>
+                                <h5>Subtotal</h5> 
+                                <h5>{totalPrice}</h5> 
+                                </div>
+                              
+                               <hr />
+                               <div className='d-flex justify-content-between'>
+                                <h5>Total</h5> 
+                                <h5>{totalPrice}</h5> 
+                                </div>
+                            </div>             
                     </div>
                 </div>
             </div>

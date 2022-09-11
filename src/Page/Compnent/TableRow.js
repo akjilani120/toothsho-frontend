@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const TableRow = ({ product, index , setSpcialPrice }) => {
+const TableRow = ({ product, index , setSpcialPrice ,setTotalPrice }) => {
     const { name, img, price, color, size , _id } = product
     const [check , setCheck] = useState("")
     const [inputQuantity, setInputQuantity] = useState(1)
@@ -27,7 +27,8 @@ const TableRow = ({ product, index , setSpcialPrice }) => {
       }
       if(check == "on"){
        axios.post("http://localhost:5000/fashion/order" , totalOrder)
-       .then(res => {            
+       .then(res => {    
+        setTotalPrice(mainPrice)        
         toast("Thank you For order")
      })
         

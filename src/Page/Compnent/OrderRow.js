@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const OrderRow = ({product , refetch ,spcialPrice }) => {
+const OrderRow = ({product , refetch ,spcialPrice , setTotalPrice }) => {
     const {name , img , quantity , price , _id} = product
     const [mainQuantity , seMainQuantity] = useState(Number(quantity))
     const increament = (id) =>{
@@ -11,6 +11,7 @@ const OrderRow = ({product , refetch ,spcialPrice }) => {
            price : mainPrice,
            quantity : mainQuantity
         }
+        setTotalPrice(mainPrice)
         const url = `http://localhost:5000/fashion/update/${id}`
         fetch(url ,{
             method:"PUT",
@@ -20,7 +21,7 @@ const OrderRow = ({product , refetch ,spcialPrice }) => {
             body : JSON.stringify(updataData)
         })
         .then(res => res.json())
-        .then(data =>{
+        .then(data =>{            
             refetch()
         })
         
@@ -33,6 +34,7 @@ const OrderRow = ({product , refetch ,spcialPrice }) => {
            price : mainPrice,
            quantity : mainQuantity
         }
+        setTotalPrice(mainPrice)
         const url = `http://localhost:5000/fashion/update/${id}`
         fetch(url ,{
             method:"PUT",
@@ -42,7 +44,7 @@ const OrderRow = ({product , refetch ,spcialPrice }) => {
             body : JSON.stringify(updataData)
         })
         .then(res => res.json())
-        .then(data =>{
+        .then(data =>{            
             refetch()
         })
         
@@ -68,7 +70,7 @@ const OrderRow = ({product , refetch ,spcialPrice }) => {
          {mainQuantity} 
          <button className='btn btn-primary ms-3'  onClick={()=>increament(_id)}> +</button>
          </td> 
-        <td> $ {price}</td>
+        <td> <h5 className='text-primary'>$ {price}</h5></td>
 
        
     </tr>
