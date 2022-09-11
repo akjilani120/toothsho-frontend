@@ -4,21 +4,30 @@
     width: 50px;
 }
 .quantity-input{
-    width: 15%;
+    width: 50%;
 }
 .shoping-cart-icon{
    margin: 3px 25px;
    font-size: 25px;   
    cursor: pointer;  
    color: rgb(17, 156, 115); 
+   padding: 10px;
    
 }
-.cart-td{
-    
+.cart-td p{
+    width: 30%;
+}
+.cart-td p .shoping-cart-icon:hover{
+    background-color:black ;
+    color: white;
 }
 /* Table Row Part over */
 @media screen and (max-width:768px) {
+    .cart-td p{
+        width: 100%;
+    }
     .quantity-input{
-        width: 80%;
+        width: 100%;
     } 
+
 }
