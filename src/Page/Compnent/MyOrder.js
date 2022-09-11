@@ -1,8 +1,8 @@
 import React from 'react';
 import { useQuery } from 'react-query'
 import OrderRow from './OrderRow';
-const MyOrder = () => {
-    const { isLoading, error, data } = useQuery('repoData', () =>
+const MyOrder = ({spcialPrice}) => {
+    const { isLoading, error, data , refetch } = useQuery('repoData', () =>
         fetch('http://localhost:5000/fashion/order').then(res =>
             res.json()
         )
@@ -31,7 +31,7 @@ const MyOrder = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        data.map((product, index) => <OrderRow index={index} product={product} key={product._id} />)
+                                        data.map((product, index) => <OrderRow refetch={refetch} spcialPrice={spcialPrice} product={product} key={product._id} />)
 
                                     }
                                 </tbody>

@@ -5,7 +5,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import TableRow from './Compnent/TableRow';
 import { Link } from "react-router-dom";
 import './Home.css'
-const Home = () => {
+const Home = ({setSpcialPrice}) => {
     const [productValue , setProductValue] =useState("")
     const [sizeValue , setSizeValue] =useState("")
     const [searchValue , setSearchValue] = useState("")
@@ -102,7 +102,7 @@ const Home = () => {
                                     return val
                                 }
                             })                            
-                            .map((product , index) => <TableRow index={index} product={product} key={product._id}/>)
+                            .map((product , index) => <TableRow setSpcialPrice={setSpcialPrice} index={index} product={product} key={product._id}/>)
                           }
                         </tbody>
                     </table>
