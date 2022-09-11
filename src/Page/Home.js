@@ -10,7 +10,7 @@ const Home = ({setSpcialPrice , setTotalPrice}) => {
     const [sizeValue , setSizeValue] =useState("")
     const [searchValue , setSearchValue] = useState("")
     const { isLoading, error, data } = useQuery('repoData', () =>
-        fetch('http://localhost:5000/fashion').then(res =>
+        fetch('https://pure-sierra-82824.herokuapp.com/fashion').then(res =>
             res.json()
         )
     )

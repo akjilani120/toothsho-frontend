@@ -26,7 +26,7 @@ const TableRow = ({ product, index , setSpcialPrice ,setTotalPrice }) => {
 
       }
       if(check == "on"){
-       axios.post("http://localhost:5000/fashion/order" , totalOrder)
+       axios.post("https://pure-sierra-82824.herokuapp.com/fashion/order" , totalOrder)
        .then(res => {    
         setTotalPrice(mainPrice)        
         toast("Thank you For order")

@@ -12,7 +12,7 @@ const OrderRow = ({product , refetch ,spcialPrice , setTotalPrice }) => {
            quantity : mainQuantity
         }
         setTotalPrice(mainPrice)
-        const url = `http://localhost:5000/fashion/update/${id}`
+        const url = `https://pure-sierra-82824.herokuapp.com/fashion/update/${id}`
         fetch(url ,{
             method:"PUT",
             headers:{
@@ -35,7 +35,7 @@ const OrderRow = ({product , refetch ,spcialPrice , setTotalPrice }) => {
            quantity : mainQuantity
         }
         setTotalPrice(mainPrice)
-        const url = `http://localhost:5000/fashion/update/${id}`
+        const url = `https://pure-sierra-82824.herokuapp.com/fashion/update/${id}`
         fetch(url ,{
             method:"PUT",
             headers:{
@@ -50,7 +50,7 @@ const OrderRow = ({product , refetch ,spcialPrice , setTotalPrice }) => {
         
     }
     const handleDelete =(id) =>{
-        const url = `http://localhost:5000/fashion/order/delete/${id}`
+        const url = `https://pure-sierra-82824.herokuapp.com/fashion/order/delete/${id}`
         fetch(url ,{
             method:"DELETE",           
         })
