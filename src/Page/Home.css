@@ -1,0 +1,24 @@
+/* Table Row Part start */
+.table-img{
+    width: 150px;
+    width: 50px;
+}
+.quantity-input{
+    width: 15%;
+}
+.shoping-cart-icon{
+   margin: 3px 25px;
+   font-size: 25px;   
+   cursor: pointer;  
+   color: rgb(17, 156, 115); 
+   
+}
+.cart-td{
+    
+}
+/* Table Row Part over */
+@media screen and (max-width:768px) {
+    .quantity-input{
+        width: 80%;
+    } 
+}
