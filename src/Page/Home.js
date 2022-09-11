@@ -107,7 +107,7 @@ const Home = () => {
                     </table>
                 </div>
             </div>
-            <h1>I am finishes</h1>
+           
         </div>
     );
 };

@@ -26,7 +26,6 @@ const TableRow = ({ product, index }) => {
 
       }
       if(check == "on"){
-
        axios.post("http://localhost:5000/fashion/order" , totalOrder)
        .then(res => {       
         toast("Thank you For order")
