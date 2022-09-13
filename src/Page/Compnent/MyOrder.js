@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useQuery } from 'react-query'
+import { Link } from 'react-router-dom';
 import OrderRow from './OrderRow';
 const MyOrder = () => {
     const [totalPrice, setTotalPrice]= useState(0)
@@ -31,10 +32,11 @@ const MyOrder = () => {
     if (error) return 'An error has occurred: ' + error.message
     return (
         <div>
-            <div className="container">
-                <h1>My orders</h1>
+            <div className='my-3'> <Link className='btn btn-success ms-3' to="/">Home </Link> </div>
+            <div className="container">               
                 <div className='row'>
                     <div className="col-md-8">
+                    <h1 className='text-center text-primary'>My orders</h1>
                         <div className="table-show table-responsive mt-4">
                             <table class="table table-striped text-center">
                                 <thead className='table-dark'>
@@ -68,8 +70,13 @@ const MyOrder = () => {
                             <div className='d-flex justify-content-between'>
                                 <h5>Total</h5>
                                 <h5>{totalPrice}</h5>
+
                             </div>
+                            <div className='mx-auto my-4'>
+                            <Link className='btn btn-primary btn-block' to="/thankPage">Processed To Check Out</Link>
                         </div>
+                        </div>
+                       
                     </div>
                 </div>
             </div>

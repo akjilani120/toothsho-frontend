@@ -53,8 +53,8 @@ const OrderRow = ({product , refetch }) => {
         <th scope="row">  <button className='btn btn-danger' onClick={()=>handleDelete(_id)}>x</button> </th>
         <td> <img className='table-img' src={img} alt="product photos" /> </td>
         <td >{name}</td>     
-        <td> $ {price}</td>
-        <td ><button className='btn btn-primary me-3'   onClick={()=>handleDecreament()}>  - </button>
+        <td> $ {total}</td>
+        <td ><button className='btn btn-primary me-3' disabled={mainQuantity <= 1}  onClick={()=>handleDecreament()}>  - </button>
          {mainQuantity} 
          <button className='btn btn-primary ms-3'  onClick={()=>increament()}> +</button>
          </td> 
