@@ -11,12 +11,13 @@ const MyOrder = () => {
             res.json()
         )
     )
-    console.log(data);
+   
     const getTotal=()=>{
         data.forEach(element => {
-          setTotalPrice(totalPrice + element.total)
+          setTotalPrice( element.total )          
        })
    }
+
     useEffect(()=>{
         if(data){
             getTotal()
@@ -51,7 +52,7 @@ const MyOrder = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        data.map((product, index) => <OrderRow setTotalPrice={setTotalPrice} refetch={refetch}  product={product} key={product._id} />)
+                                        data.map((product, index) => <OrderRow totalPrice={totalPrice}  setTotalPrice={setTotalPrice} refetch={refetch}  product={product} key={product._id} />)
 
                                     }
                                 </tbody>

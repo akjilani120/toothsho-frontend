@@ -2,9 +2,9 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-const OrderRow = ({product , refetch }) => {
+const OrderRow = ({product , refetch , totalPrice , setTotalPrice }) => {
     const {name , img , quantity , price , _id, total} = product
-    const [mainQuantity , seMainQuantity] = useState(Number(quantity))
+    const [mainQuantity , setMainQuantity] = useState(Number(quantity))
 
     const update=()=>{
         const data={
@@ -20,7 +20,8 @@ const OrderRow = ({product , refetch }) => {
             body : JSON.stringify(data)
         })
         .then(res => res.json())
-        .then(data =>{           
+        .then(data =>{ 
+                  
             refetch()
         })
     }
@@ -30,11 +31,13 @@ const OrderRow = ({product , refetch }) => {
     },[mainQuantity])
 
     const increament = () =>{
-        seMainQuantity( mainQuantity + 1) 
+        setMainQuantity( mainQuantity + 1) 
+        setTotalPrice( totalPrice +  Number(price) )   
     }
 
     const handleDecreament =() =>{
-        seMainQuantity( mainQuantity - 1)
+        setMainQuantity( mainQuantity - 1)
+        setTotalPrice( totalPrice -  price) 
     }
 
     const handleDelete =(id) =>{

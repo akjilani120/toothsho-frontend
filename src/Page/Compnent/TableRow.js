@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const TableRow = ({ product, index , setSpcialPrice ,setTotalPrice }) => {
+const TableRow = ({ product, index  }) => {
     const { name, img, price, color, size , _id } = product
     const [check , setCheck] = useState("")
     const [inputQuantity, setInputQuantity] = useState(1)
@@ -16,7 +16,7 @@ const TableRow = ({ product, index , setSpcialPrice ,setTotalPrice }) => {
       
     }
     const hanldleOrder =() =>{
-      setSpcialPrice(price)
+     
         const mainPrice = inputQuantity * Number(price)       
       const totalOrder ={
         quantity : inputQuantity ,

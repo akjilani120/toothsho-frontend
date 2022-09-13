@@ -2,7 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Page/Home';
 import MyOrder from "./Page/Compnent/MyOrder";
-import { useState } from "react";
+
 import ThankPage from "./Page/Compnent/ThankPage";
 function App() {
  
