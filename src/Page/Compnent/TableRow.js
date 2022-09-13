@@ -22,13 +22,13 @@ const TableRow = ({ product, index , setSpcialPrice ,setTotalPrice }) => {
         quantity : inputQuantity ,
         img ,
         name,
-        price : mainPrice
+        price,
+        total:mainPrice
 
       }
       if(check == "on"){
        axios.post("https://pure-sierra-82824.herokuapp.com/fashion/order" , totalOrder)
-       .then(res => {    
-        setTotalPrice(mainPrice)        
+       .then(res => {       
         toast("Thank you For order")
      })
         
@@ -48,7 +48,7 @@ const TableRow = ({ product, index , setSpcialPrice ,setTotalPrice }) => {
             <td> $ {price}</td>
             <td>  {size}</td>
             <td className='cart-td d-md-flex  justify-content-center'>
-           <p>  <input onChange={(e) => setInputQuantity(e.target.value)} className='quantity-input' placeholder='1' type="number" name="" id=""  min="1"/> </p>
+           <p>  <input onChange={(e) => setInputQuantity(e.target.value)} className='quantity-input' value={inputQuantity} placeholder='1' type="number" name="" id=""  min="1"/> </p>
             <p> <FontAwesomeIcon  onClick={hanldleOrder} className='shoping-cart-icon' icon={ faCartShopping}  /></p>
             <p> <input onClick={handleCheck} type="checkbox" name="" id="" /></p>
             </td>

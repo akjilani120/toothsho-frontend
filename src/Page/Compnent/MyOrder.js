@@ -1,14 +1,30 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useQuery } from 'react-query'
 import OrderRow from './OrderRow';
-const MyOrder = ({ spcialPrice, totalPrice, setTotalPrice }) => {
-    const [show, setShow] = useState(1)
+const MyOrder = () => {
+    const [totalPrice, setTotalPrice]= useState(0)
     const { isLoading, error, data, refetch } = useQuery('orderData', () =>
         fetch('https://pure-sierra-82824.herokuapp.com/fashion/order').then(res =>
             res.json()
         )
     )
+    console.log(data);
+    const getTotal=()=>{
+        data.forEach(element => {
+          setTotalPrice(totalPrice + element.total)
+       })
+   }
+    useEffect(()=>{
+        if(data){
+            getTotal()
+        }
+    },[data])
+
+   
+
+   
 
     if (isLoading) return <h4>Loading .......</h4>
 
@@ -33,7 +49,7 @@ const MyOrder = ({ spcialPrice, totalPrice, setTotalPrice }) => {
                                 </thead>
                                 <tbody>
                                     {
-                                        data.map((product, index) => <OrderRow setTotalPrice={setTotalPrice} refetch={refetch} spcialPrice={spcialPrice} product={product} key={product._id} />)
+                                        data.map((product, index) => <OrderRow setTotalPrice={setTotalPrice} refetch={refetch}  product={product} key={product._id} />)
 
                                     }
                                 </tbody>

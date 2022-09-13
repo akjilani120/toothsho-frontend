@@ -1,54 +1,42 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 
-const OrderRow = ({product , refetch ,spcialPrice , setTotalPrice }) => {
-    const {name , img , quantity , price , _id} = product
+const OrderRow = ({product , refetch }) => {
+    const {name , img , quantity , price , _id, total} = product
     const [mainQuantity , seMainQuantity] = useState(Number(quantity))
-    const increament = (id) =>{
-        seMainQuantity( mainQuantity + 1)
-        const mainPrice = mainQuantity * Number(spcialPrice)
-        const updataData = {
-           price : mainPrice,
-           quantity : mainQuantity
+
+    const update=()=>{
+        const data={
+            quantity:mainQuantity,
+            total:price * mainQuantity
         }
-        setTotalPrice(mainPrice)
-        const url = `https://pure-sierra-82824.herokuapp.com/fashion/update/${id}`
+        const url = `https://pure-sierra-82824.herokuapp.com/fashion/update/${_id}`
         fetch(url ,{
             method:"PUT",
             headers:{
                 "content-type" : "application/json"
             },
-            body : JSON.stringify(updataData)
+            body : JSON.stringify(data)
         })
         .then(res => res.json())
-        .then(data =>{            
+        .then(data =>{           
             refetch()
         })
-        
     }
-    const handleDecreament =(id) =>{
+
+    useEffect(()=>{
+        update()
+    },[mainQuantity])
+
+    const increament = () =>{
+        seMainQuantity( mainQuantity + 1) 
+    }
+
+    const handleDecreament =() =>{
         seMainQuantity( mainQuantity - 1)
-        const mainPrice = mainQuantity * Number(spcialPrice)
-        
-        const updataData = {
-           price : mainPrice,
-           quantity : mainQuantity
-        }
-        setTotalPrice(mainPrice)
-        const url = `https://pure-sierra-82824.herokuapp.com/fashion/update/${id}`
-        fetch(url ,{
-            method:"PUT",
-            headers:{
-                "content-type" : "application/json"
-            },
-            body : JSON.stringify(updataData)
-        })
-        .then(res => res.json())
-        .then(data =>{            
-            refetch()
-        })
-        
     }
+
     const handleDelete =(id) =>{
         const url = `https://pure-sierra-82824.herokuapp.com/fashion/order/delete/${id}`
         fetch(url ,{
@@ -66,11 +54,11 @@ const OrderRow = ({product , refetch ,spcialPrice , setTotalPrice }) => {
         <td> <img className='table-img' src={img} alt="product photos" /> </td>
         <td >{name}</td>     
         <td> $ {price}</td>
-        <td ><button className='btn btn-primary me-3'  disabled={ mainQuantity === 1} onClick={()=>handleDecreament(_id)}>  - </button>
+        <td ><button className='btn btn-primary me-3'   onClick={()=>handleDecreament()}>  - </button>
          {mainQuantity} 
-         <button className='btn btn-primary ms-3'  onClick={()=>increament(_id)}> +</button>
+         <button className='btn btn-primary ms-3'  onClick={()=>increament()}> +</button>
          </td> 
-        <td> <h5 className='text-primary'>$ {price}</h5></td>
+        <td> <h5 className='text-primary'>$ {total}</h5></td>
 
        
     </tr>
